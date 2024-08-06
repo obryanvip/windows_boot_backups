@@ -1,0 +1,17 @@
+There are a total of 2 entries listed in the bootloader.
+
+Default: Windows 7
+Timeout: 10 seconds
+EasyBCD Boot Device: D:\
+
+Entry #1
+Name: Windows 10
+BCD ID: {ff9f661a-d84a-11ed-bcda-f84b71f2dc39}
+Drive: D:\
+Bootloader Path: \Windows\system32\winload.exe
+
+Entry #2
+Name: Windows 7
+BCD ID: {current}
+Drive: C:\
+Bootloader Path: \Windows\system32\winload.exe
