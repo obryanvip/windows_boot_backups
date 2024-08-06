@@ -1,0 +1,46 @@
+Windows Boot Manager
+--------------------
+identifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}
+device                  partition=D:
+description             Windows Boot Manager
+locale                  es-ES
+inherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}
+default                 {ff9f6612-d84a-11ed-bcda-f84b71f2dc39}
+resumeobject            {ff9f6611-d84a-11ed-bcda-f84b71f2dc39}
+displayorder            {ff9f661a-d84a-11ed-bcda-f84b71f2dc39}
+                        {ff9f6612-d84a-11ed-bcda-f84b71f2dc39}
+toolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}
+timeout                 10
+
+Windows Boot Loader
+-------------------
+identifier              {ff9f661a-d84a-11ed-bcda-f84b71f2dc39}
+device                  partition=D:
+path                    \Windows\system32\winload.exe
+description             Windows 10
+locale                  es-ES
+inherit                 {6efb52bf-1766-41db-a6b3-0ee5eff72bd7}
+recoverysequence        {ff9f661b-d84a-11ed-bcda-f84b71f2dc39}
+custom:15000066         3
+recoveryenabled         Yes
+custom:17000077         352321653
+osdevice                partition=D:
+systemroot              \Windows
+resumeobject            {ff9f6619-d84a-11ed-bcda-f84b71f2dc39}
+nx                      OptIn
+custom:250000c2         1
+
+Windows Boot Loader
+-------------------
+identifier              {ff9f6612-d84a-11ed-bcda-f84b71f2dc39}
+device                  partition=C:
+path                    \Windows\system32\winload.exe
+description             Windows 7
+locale                  es-ES
+inherit                 {6efb52bf-1766-41db-a6b3-0ee5eff72bd7}
+recoverysequence        {ff9f6613-d84a-11ed-bcda-f84b71f2dc39}
+recoveryenabled         Yes
+osdevice                partition=C:
+systemroot              \Windows
+resumeobject            {ff9f6611-d84a-11ed-bcda-f84b71f2dc39}
+nx                      OptIn
